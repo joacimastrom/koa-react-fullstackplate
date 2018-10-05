@@ -14,17 +14,6 @@
     "flow start": "flow start",
     "flow stop": "flow stop"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm test"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -38,15 +27,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
-    "eslint": "^5.6.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "flow-bin": "^0.82.0",
-    "husky": "^1.1.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.4",
-    "prettier": "^1.14.3"
+    "nodemon": "^1.18.4"
   }
 }
