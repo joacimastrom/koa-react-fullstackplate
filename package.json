@@ -9,7 +9,7 @@
     "test:watch": "NODE_ENV=test jest --watchAll",
     "backend": "cd backend && npm run dev",
     "lint": "eslint --max-warnings 0 .",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "flow": "flow",
     "flow:start": "flow start",
     "flow:stop": "flow stop"
