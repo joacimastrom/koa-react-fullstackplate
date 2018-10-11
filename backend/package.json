@@ -6,13 +6,8 @@
   "scripts": {
     "dev": "nodemon src/server/index",
     "start": "node src/server/index",
-    "test": "NODE_ENV=test mocha src/**/*.test.js",
-    "test:watch": "NODE_ENV=test mocha src/**/*.test.js -w",
     "build": "babel src/ -d lib/",
-    "flow": "flow",
-    "lint": "eslint .",
-    "flow start": "flow start",
-    "flow stop": "flow stop"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",

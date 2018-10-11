@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd backend && npm run dev",
+    "test": "lint-staged && NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watchAll",
+    "backend": "cd backend && npm run dev",
+    "lint": "eslint --max-warnings 0 .",
+    "flow": "flow",
+    "flow:start": "flow start",
+    "flow:stop": "flow stop"
   },
   "husky": {
     "hooks": {
@@ -33,6 +40,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "flow-bin": "^0.82.0",
     "husky": "^1.1.0",
+    "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
   }
