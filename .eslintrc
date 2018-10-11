@@ -1,7 +1,12 @@
 {
+  "parser": "babel-eslint",
   "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "plugins": ["flowtype"],
   "env": {
     "node": true,
     "mocha": true
+  },
+  "rules": {
+    "no-console": 2
   }
 }
