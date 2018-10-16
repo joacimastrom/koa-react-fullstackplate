@@ -6,7 +6,7 @@ cache: false
 install:
 - npm install
 - cd backend && npm install
-- cd ..
+- cd ../frontend && npm install
 script:
 - npm test
 - npm run coveralls
