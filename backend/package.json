@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/server/index",
     "start": "node src/server/index",
-    "build": "babel src/ -d lib/",
+    "test": "jest .",
+    "build": "NODE_ENV=test babel src/ -d lib/",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -17,7 +18,8 @@
     "koa": "^2.5.3",
     "koa-bodyparser": "^4.2.1",
     "koa-helmet": "^4.0.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",

@@ -4,22 +4,16 @@ const Koa = require("koa");
 const Router = require("koa-router");
 const BodyParser = require("koa-bodyparser");
 const Helmet = require("koa-helmet");
+const KoaStatic = require("koa-static");
 
 const app = new Koa();
 const router = new Router();
 
 const PORT =
   process.env.NODE_ENV === "test"
-    ? process.env.TEST_PORT || 8081
-    : process.env.PORT || 8080;
+    ? process.env.TEST_PORT || 4001
+    : process.env.PORT || 4000;
 app.use(Helmet());
-
-app.use(async ctx => {
-  ctx.body = {
-    status: "success",
-    message: "hello, world!"
-  };
-});
 
 app.use(
   BodyParser({
@@ -32,10 +26,12 @@ app.use(
   })
 );
 
-require("./routes")(router);
+require("../routes")(router);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+
+if (process.env !== "test") app.use(KoaStatic("./build"));
 
 const server = app.listen(
   PORT,
