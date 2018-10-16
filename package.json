@@ -9,7 +9,7 @@
     "frontend": "cd frontend && npm start",
     "test-frontend": "cd frontend && npm test",
     "test-backend": "cd backend && npm test",
-    "test": "lint-staged && NODE_ENV=test && cd backend && npm test && cd ../frontend && CI=true npm test",
+    "test": "lint-staged && NODE_ENV=test && cd backend && npm test && cd ../frontend && npm test -- --coverage",
     "build": "cd frontend && npm run build",
     "lint": "eslint --max-warnings 0 .",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
